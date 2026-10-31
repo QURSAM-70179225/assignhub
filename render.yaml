@@ -1,0 +1,25 @@
+# Render Blueprint — Render reads this file when you choose "New > Blueprint".
+# Secrets (sync: false) are typed into Render's dashboard, never stored here.
+services:
+  - type: web
+    name: assignhub
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/stats
+    envVars:
+      - key: NODE_VERSION
+        value: 22.14.0
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: WHATSAPP_NUMBER
+        value: "923107577751"
+      - key: WHATSAPP_DISPLAY
+        value: 0310-7577751
+      - key: OWNER_NAME
+        value: Hafsa Ali
+      - key: BRAND_NAME
+        value: AssignHub

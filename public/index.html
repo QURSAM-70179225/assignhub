@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AssignHub — Assignment & Project Help</title>
+  <meta name="description" content="Coding assignments, AI/ML projects, web development, PPT slides and reports — by an IT student. Contact directly on WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+  <canvas id="confetti"></canvas>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="logo"><span class="logo-mark">&lt;/&gt;</span> <span data-brand>AssignHub</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#estimator">Price</a>
+        <a href="#fun">Fun Zone</a>
+        <a href="#order">Order</a>
+        <a href="#track">Track</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark / light mode" title="Toggle theme">🌙</button>
+        <a class="btn btn-wa btn-sm hide-sm" data-wa="Hi! I need help with an assignment." target="_blank" rel="noopener">WhatsApp</a>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <span class="pill">🎓 IT student · CS · AI · Any field</span>
+          <h1>Stuck on an assignment?<br><span class="grad">I'll help you build</span> <span class="typed" id="typed"></span><span class="caret">|</span></h1>
+          <p class="lead">Hi, I'm <strong data-owner>Hafsa Ali</strong> — an IT student who loves solving problems. Coding assignments, AI/ML projects, websites, databases, PPT slides, reports… send me your task and get it done on time.</p>
+          <div class="hero-cta">
+            <a href="#order" class="btn btn-primary">📝 Submit Your Task</a>
+            <a class="btn btn-wa" data-wa="Hi! I need help with an assignment." target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+          </div>
+          <div class="hero-badges">
+            <span>⚡ Fast delivery</span><span>🔒 100% private</span><span>🔁 Free revisions</span><span>💸 Student prices</span>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="terminal" id="terminal">
+            <div class="term-bar"><i></i><i></i><i></i><span>assignment.py</span></div>
+            <pre class="term-body" id="termBody"></pre>
+          </div>
+          <div class="floaty f1">🤖 AI/ML</div>
+          <div class="floaty f2">🌐 Web</div>
+          <div class="floaty f3">📊 PPT</div>
+        </div>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Python</span><span>Java</span><span>C++</span><span>C#</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>PHP</span><span>SQL</span><span>MongoDB</span><span>TensorFlow</span><span>PyTorch</span><span>scikit-learn</span><span>Flutter</span><span>Android</span><span>HTML/CSS</span><span>Excel</span><span>MATLAB</span><span>PowerPoint</span><span>Data Structures</span><span>OOP</span><span>Networking</span>
+          <span>Python</span><span>Java</span><span>C++</span><span>C#</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>PHP</span><span>SQL</span><span>MongoDB</span><span>TensorFlow</span><span>PyTorch</span><span>scikit-learn</span><span>Flutter</span><span>Android</span><span>HTML/CSS</span><span>Excel</span><span>MATLAB</span><span>PowerPoint</span><span>Data Structures</span><span>OOP</span><span>Networking</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="stats container reveal">
+      <div class="stat"><b data-count="10" data-suffix="+">0</b><span>Subjects covered</span></div>
+      <div class="stat"><b id="statTotal" data-count="0">0</b><span>Requests received</span></div>
+      <div class="stat"><b data-count="24" data-suffix="h">0</b><span>Urgent delivery</span></div>
+      <div class="stat"><b data-count="100" data-suffix="%">0</b><span>Original work</span></div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What I do</span>
+          <h2>Services for every subject</h2>
+          <p>Click any card to start an order for that service.</p>
+        </div>
+        <div class="services-grid" id="servicesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Simple process</span>
+          <h2>How it works</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><span>1</span><h3>Send your task</h3><p>Fill the form below or message me directly on WhatsApp with the details & files.</p></div>
+          <div class="step reveal"><span>2</span><h3>Get a quote</h3><p>I review it and reply on WhatsApp with a fair price and delivery time.</p></div>
+          <div class="step reveal"><span>3</span><h3>I get to work</h3><p>Track progress anytime with your tracking ID — no account needed.</p></div>
+          <div class="step reveal"><span>4</span><h3>Receive & learn</h3><p>Get clean, commented work plus an explanation so you understand it.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRICE ESTIMATOR ===== -->
+    <section class="section" id="estimator">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Instant estimate</span>
+          <h2>How much will it cost?</h2>
+          <p>Play with the options for a rough idea. The final price is confirmed on WhatsApp.</p>
+        </div>
+        <div class="estimator card reveal">
+          <div class="est-controls">
+            <label>Service
+              <select id="estService"></select>
+            </label>
+            <label>Size / complexity: <b id="estSizeLabel">Medium</b>
+              <input type="range" id="estSize" min="1" max="5" value="3">
+            </label>
+            <label>Deadline: <b id="estDaysLabel">5 days</b>
+              <input type="range" id="estDays" min="1" max="14" value="5">
+            </label>
+            <label class="check"><input type="checkbox" id="estExplain"> Include explanation / viva prep (+20%)</label>
+          </div>
+          <div class="est-result">
+            <span class="muted">Estimated price</span>
+            <div class="est-price" id="estPrice">Rs 0</div>
+            <div class="est-meter"><div id="estMeter"></div></div>
+            <span class="muted small" id="estNote"></span>
+            <button class="btn btn-primary" id="estUse">Use this estimate →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FUN ZONE ===== -->
+    <section class="section alt" id="fun">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Take a break 🎮</span>
+          <h2>Fun Zone</h2>
+          <p>Win a discount, check your deadline panic level, or laugh at a programmer joke.</p>
+        </div>
+        <div class="fun-grid">
+          <!-- Spin wheel -->
+          <div class="card fun-card reveal">
+            <h3>🎡 Spin & Win</h3>
+            <p class="muted small">One free spin per visitor. The code is auto-applied to your order.</p>
+            <div class="wheel-wrap">
+              <div class="wheel-pointer">▼</div>
+              <canvas id="wheel" width="300" height="300"></canvas>
+            </div>
+            <button class="btn btn-primary" id="spinBtn">Spin the wheel</button>
+            <div class="prize" id="prize"></div>
+          </div>
+
+          <!-- Panic meter -->
+          <div class="card fun-card reveal">
+            <h3>😱 Deadline Panic Meter</h3>
+            <p class="muted small">When is your assignment due?</p>
+            <input type="datetime-local" id="panicDate">
+            <div class="countdown" id="countdown">--d --h --m --s</div>
+            <div class="panic-bar"><div id="panicFill"></div></div>
+            <div class="panic-msg" id="panicMsg">Pick a date to see how worried you should be.</div>
+            <a class="btn btn-wa btn-sm" id="panicWa" target="_blank" rel="noopener" style="display:none">🚑 Emergency help on WhatsApp</a>
+          </div>
+
+          <!-- Jokes + quiz -->
+          <div class="card fun-card reveal">
+            <h3>😂 Dev Joke Generator</h3>
+            <div class="joke" id="joke">Why do programmers prefer dark mode? Because light attracts bugs. 🐛</div>
+            <button class="btn btn-ghost" id="jokeBtn">Another one</button>
+            <hr>
+            <h3>🧠 Quick CS Quiz</h3>
+            <div id="quiz"></div>
+          </div>
+        </div>
+
+        <!-- Bug hunt mini game -->
+        <div class="card bug-game reveal">
+          <div>
+            <h3>🐞 Bug Hunt</h3>
+            <p class="muted small">Squash 10 bugs in 15 seconds to unlock the secret 20% code!</p>
+          </div>
+          <div class="bug-arena" id="bugArena">
+            <button class="btn btn-primary" id="bugStart">Start hunting</button>
+          </div>
+          <div class="bug-hud"><span>Bugs: <b id="bugScore">0</b>/10</span><span>Time: <b id="bugTime">15</b>s</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ORDER FORM ===== -->
+    <section class="section" id="order">
+      <div class="container order-wrap">
+        <div class="order-info reveal">
+          <span class="eyebrow">Get started</span>
+          <h2>Submit your assignment</h2>
+          <p>Tell me what you need. You'll get a tracking ID right away and I'll contact you on WhatsApp with a quote — usually within an hour.</p>
+          <ul class="checklist">
+            <li>No account or login needed</li>
+            <li>Your details stay private</li>
+            <li>Share files via Google Drive / WeTransfer link, or send them on WhatsApp</li>
+          </ul>
+          <div class="wa-card">
+            <div class="wa-icon">💬</div>
+            <div>
+              <b>Prefer chatting?</b>
+              <span>WhatsApp: <a data-wa="Hi! I need help with an assignment." target="_blank" rel="noopener" data-wa-display>0310-7577751</a></span>
+            </div>
+          </div>
+        </div>
+
+        <form class="card order-form reveal" id="orderForm" novalidate>
+          <div class="progress"><div id="formProgress"></div></div>
+          <div class="grid-2">
+            <label>Your name *<input name="name" required maxlength="80" placeholder="Ali Khan"></label>
+            <label>WhatsApp number *<input name="whatsapp" required maxlength="25" placeholder="03xx-xxxxxxx" inputmode="tel"></label>
+            <label>Email (optional)<input name="email" type="email" maxlength="120" placeholder="you@uni.edu.pk"></label>
+            <label>University (optional)<input name="university" maxlength="120" placeholder="e.g. FAST, NUST, COMSATS"></label>
+            <label>Field / subject *<input name="field" required maxlength="80" placeholder="e.g. Data Structures, AI, Marketing" list="fieldList"></label>
+            <label>Service *<select name="service" required id="serviceSelect"></select></label>
+          </div>
+          <label>Task title *<input name="title" required maxlength="150" placeholder="e.g. Library Management System in Java"></label>
+          <label>Describe the task * <span class="muted small" id="descCount">0/4000</span>
+            <textarea name="description" required maxlength="4000" rows="5" placeholder="Requirements, language/tools, number of slides/pages, marking rubric…"></textarea>
+          </label>
+          <div class="grid-2">
+            <label>Deadline *<input name="deadline" type="datetime-local" required></label>
+            <label>Budget (optional)<input name="budget" maxlength="40" placeholder="e.g. Rs 3000"></label>
+            <label>File link (optional)<input name="fileLink" type="url" maxlength="500" placeholder="https://drive.google.com/…"></label>
+            <label>Promo code<input name="promo" maxlength="20" placeholder="Win one in the Fun Zone!" id="promoInput"></label>
+          </div>
+          <input type="hidden" name="estimate" id="estimateInput">
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-error" id="formError" role="alert"></div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="submitBtn">🚀 Submit request</button>
+            <span class="muted small">or <a href="#" id="sendViaWa">send these details on WhatsApp instead</a></span>
+          </div>
+        </form>
+      </div>
+      <datalist id="fieldList">
+        <option>Programming Fundamentals</option><option>Object Oriented Programming</option><option>Data Structures & Algorithms</option>
+        <option>Database Systems</option><option>Artificial Intelligence</option><option>Machine Learning</option><option>Web Engineering</option>
+        <option>Operating Systems</option><option>Computer Networks</option><option>Software Engineering</option><option>Business / Management</option>
+      </datalist>
+    </section>
+
+    <!-- ===== TRACK ===== -->
+    <section class="section alt" id="track">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">No login needed</span>
+          <h2>Track your request</h2>
+          <p>Enter the tracking ID you got after submitting (e.g. AH-7K3Q9P).</p>
+        </div>
+        <form class="track-form reveal" id="trackForm">
+          <input id="trackInput" placeholder="AH-XXXXXX" maxlength="20" required>
+          <button class="btn btn-primary">Track</button>
+        </form>
+        <div class="track-result" id="trackResult"></div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq">
+      <div class="container narrow">
+        <div class="section-head reveal">
+          <span class="eyebrow">Questions</span>
+          <h2>FAQ</h2>
+        </div>
+        <div class="faq reveal">
+          <details><summary>Which subjects can you help with?</summary><p>Mainly CS / IT / AI — programming, web & mobile apps, databases, machine learning, networking — but I also do PPT slides, reports, Excel and documentation for any field. If you're unsure, just ask on WhatsApp!</p></details>
+          <details><summary>How do I pay?</summary><p>Payment details (JazzCash, Easypaisa or bank transfer) are shared on WhatsApp once we agree on the price. For bigger projects we can split payment into parts.</p></details>
+          <details><summary>How fast can you deliver?</summary><p>Small tasks can be done within 24 hours. Larger projects depend on scope — you'll get a clear delivery time with your quote.</p></details>
+          <details><summary>Will you explain the work?</summary><p>Yes! Code comes with comments, and I'm happy to walk you through it so you can understand it and present it confidently.</p></details>
+          <details><summary>Do I need to create an account?</summary><p>No. Just submit the form — you get a tracking ID to check the status anytime.</p></details>
+          <details><summary>What if I need changes?</summary><p>Revisions based on your original requirements are free.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta container reveal">
+      <h2>Deadline coming? Let's get it done. 💪</h2>
+      <p>One message is all it takes.</p>
+      <a class="btn btn-wa btn-lg" data-wa="Hi! I need help with an assignment." target="_blank" rel="noopener">💬 Message me on WhatsApp</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><span class="logo"><span class="logo-mark">&lt;/&gt;</span> <span data-brand>AssignHub</span></span>
+        <p class="muted small">Assignment & project help by <span data-owner>Hafsa Ali</span>, IT student.</p></div>
+      <div class="muted small">WhatsApp: <a data-wa="Hi!" target="_blank" rel="noopener" data-wa-display>0310-7577751</a><br>© <span id="year"></span> <span data-brand>AssignHub</span></div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="wa-float" data-wa="Hi! I need help with an assignment." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" width="30" height="30" fill="#fff" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.1c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23.2c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.2 1.2-4-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.6C5.3 9.8 10.1 5 16 5s10.6 4.8 10.6 10.6S21.9 26.2 16 26.2zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0c-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.6-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+    <span class="wa-tip">Need help? Chat now!</span>
+  </a>
+
+  <!-- Success modal -->
+  <div class="modal" id="successModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="big-emoji">🎉</div>
+      <h3>Request received!</h3>
+      <p>Your tracking ID is</p>
+      <div class="track-id" id="successId">AH-XXXXXX</div>
+      <button class="btn btn-ghost btn-sm" id="copyId">📋 Copy ID</button>
+      <p class="muted small">Save this ID to track progress. I'll message you on WhatsApp soon.</p>
+      <div class="modal-actions">
+        <a class="btn btn-wa" id="successWa" target="_blank" rel="noopener">💬 Notify me on WhatsApp now</a>
+        <button class="btn btn-ghost" id="closeModal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
