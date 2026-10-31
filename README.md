@@ -4,7 +4,7 @@ Full stack website for taking assignment / project orders (coding, AI/ML, web, P
 Visitors contact you directly on **WhatsApp (0310-7577751)** or submit an order form, which shows up in your **admin dashboard**.
 
 🌐 **Live site:** https://assignhub-lp21.onrender.com
-🔐 *
+
 
 **Stack:** Node.js + Express + SQLite locally / Neon Postgres online · plain HTML/CSS/JS frontend.
 
@@ -16,7 +16,7 @@ npm start
 ```
 
 - Website: http://localhost:3000
-- Admin dashboard: http://localhost:3000/admin  (password = `ADMIN_PASSWORD` from your `.env`)
+
 
 ## Settings — change the admin password!
 
