@@ -3,7 +3,10 @@
 Full stack website for taking assignment / project orders (coding, AI/ML, web, PPT slides, reports, any field).
 Visitors contact you directly on **WhatsApp (0310-7577751)** or submit an order form, which shows up in your **admin dashboard**.
 
-**Stack:** Node.js + Express + SQLite (built into Node, nothing to compile) · plain HTML/CSS/JS frontend.
+🌐 **Live site:** https://assignhub-lp21.onrender.com
+🔐 **Admin dashboard:** https://assignhub-lp21.onrender.com/admin
+
+**Stack:** Node.js + Express + SQLite locally / Neon Postgres online · plain HTML/CSS/JS frontend.
 
 ## Run it
 
@@ -64,6 +67,13 @@ Starting prices are in `public/app.js` (`SERVICES` list, `base` values in Rs). C
 3. **Render** (https://render.com): click **New > Blueprint** and pick the repository. Render reads `render.yaml` and asks for:
    - `ADMIN_PASSWORD`: your admin password
    - `DATABASE_URL`: the Neon connection string
-4. Wait for the deploy to finish. Your site is at `https://assignhub-xxxx.onrender.com` and the dashboard at `/admin`.
+4. Wait for the deploy to finish. The site is live at https://assignhub-lp21.onrender.com and the dashboard at https://assignhub-lp21.onrender.com/admin.
 
 Every `git push` redeploys automatically. On the free plan the site sleeps after 15 minutes with no visitors, and the first visit after that takes ~30–50 seconds.
+
+### Managing the live site
+
+- **Change the admin password:** Render → assignhub service → **Environment** → edit `ADMIN_PASSWORD` → **Save** (the site restarts).
+- **See errors:** Render → assignhub service → **Logs**.
+- **See stored orders directly:** Neon console → your project → **Tables** → `requests`.
+- **Health check:** https://assignhub-lp21.onrender.com/api/stats should return JSON.
