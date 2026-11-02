@@ -67,7 +67,7 @@ Starting prices are in `public/app.js` (`SERVICES` list, `base` values in Rs). C
 3. **Render** (https://render.com): click **New > Blueprint** and pick the repository. Render reads `render.yaml` and asks for:
    - `ADMIN_PASSWORD`: your admin password
    - `DATABASE_URL`: the Neon connection string
-4. Wait for the deploy to finish. The site is live at https://assignhub-lp21.onrender.com and the dashboard at https://assignhub-lp21.onrender.com/admin.
+4. Wait for the deploy to finish. The site is live at https://assignhub-lp21.onrender.com.
 
 Every `git push` redeploys automatically. On the free plan the site sleeps after 15 minutes with no visitors, and the first visit after that takes ~30–50 seconds.
 
