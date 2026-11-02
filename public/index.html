@@ -6,13 +6,20 @@
   <title>AssignHub — Assignment & Project Help</title>
   <meta name="description" content="Coding assignments, AI/ML projects, web development, PPT slides and reports — by an IT student. Contact directly on WhatsApp.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
 </head>
 <body>
   <canvas id="confetti"></canvas>
-  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="scroll-bar" id="scrollBar" aria-hidden="true"></div>
+  <div class="sky" aria-hidden="true">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+    <div class="orb orb-d"></div>
+    <div class="ring"></div>
+  </div>
 
   <!-- ===== NAV ===== -->
   <header class="nav" id="nav">
@@ -27,7 +34,6 @@
         <a href="#faq">FAQ</a>
       </nav>
       <div class="nav-actions">
-        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark / light mode" title="Toggle theme">🌙</button>
         <a class="btn btn-wa btn-sm hide-sm" data-wa="Hi! I need help with an assignment." target="_blank" rel="noopener">WhatsApp</a>
         <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu">☰</button>
       </div>
@@ -95,7 +101,8 @@
           <span class="eyebrow">Simple process</span>
           <h2>How it works</h2>
         </div>
-        <div class="steps">
+        <div class="steps" id="steps">
+          <div class="steps-line" aria-hidden="true"><i id="stepsFill"></i></div>
           <div class="step reveal"><span>1</span><h3>Send your task</h3><p>Fill the form below or message me directly on WhatsApp with the details & files.</p></div>
           <div class="step reveal"><span>2</span><h3>Get a quote</h3><p>I review it and reply on WhatsApp with a fair price and delivery time.</p></div>
           <div class="step reveal"><span>3</span><h3>I get to work</h3><p>Track progress anytime with your tracking ID — no account needed.</p></div>
